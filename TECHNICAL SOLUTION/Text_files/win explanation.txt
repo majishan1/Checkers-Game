@@ -1,0 +1,4 @@
+To win a game of checkers, you must stop
+all the opposition pieces from having valid moves.
+This can be done by removing all the other pieces
+from the board or by blocking off all of their valid moves.

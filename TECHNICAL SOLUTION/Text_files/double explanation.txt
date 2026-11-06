@@ -1,0 +1,4 @@
+When you land in your new position after jumping, 
+If you can perform another jump, you must.
+This carries on until you are no longer able
+to make more jumps

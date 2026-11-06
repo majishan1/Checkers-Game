@@ -1,0 +1,8 @@
+Jump your opponent's checkers to remove 
+them from the board.
+If your checker is in the diagonal space
+nearest to one of your opponent's checkers,
+then you can jump and capture that checker.
+To capture a checker, move two diagonal
+spaces in the direction of the checker you’re
+attacking, like you are hopping over your opponent's piece.

@@ -1,0 +1,200 @@
+king_movement(blue_piece@(4,1), 4, 1, blanks, None):
+    visited = set()
+    moves = {}
+    for direction in [-1, 1]:
+    IT[1]:
+        valid_moves, visited_king = find_valid_moves(blue_piece@(4,1), 4, 1, -1, blanks, True, visited):
+            moves = {}
+            new_row = 4 + -1 = 3
+            new_col_l, new_col_r = 1 - 1 = 0, 1 + 1 = 2
+
+            for new_col in [0, 2]:
+            IT[1]:
+                if self._can_jump(): --> True
+                    if (3,0) in visited: --> False
+                    
+                    visited.add(3,0) so visited = {(3,0)}
+                    new_loc = find_piece(3,0) = 0
+                    if (3,0) in blank_spaces and step == 1: --> True
+                        moves.update({(3,0): []}) so moves = {(3,0): []}
+                    if new_loc != 0 and new_loc.colour != piece.colour: --> False
+            
+            IT[2]:
+                if self._can_jump(): --> True
+                    if (3,2) in visited: --> False
+
+                    visited.add(3,2) so visited = {(3,0), (3,2)}
+                    new_loc = find_piece(3,2) = red_piece @ (3,2)
+                    if (3,2) in blank_spaces and step == 1: --> False
+
+                    if new_loc != 0 and new_loc.colour == piece.colour:
+                        mid_row, mid_col = 3, 2
+                        jump_row, jump_col = 3 + -1 = 2, 2 + (2 - 1) = 3
+
+                        if (jump_row, jump_col) in blank_spaces: --> True
+                            if king_check: --> True
+                                king_double_jump, visited_double = find_valid_moves(blue_piece@(4,1), row=2, col=3, dir=1, blank_spaces, step=2, True, visited):
+                                    
+                                    new_row = 2 + 1 = 3
+                                    new_col_l, new_col_r = 3 - 1 = 2, 3 + 1 = 4
+
+                                    for new_col in [2, 4]:
+                                    IT[1]:
+                                        if self._can_jump(): --> True
+                                            if (3,2) in visited: --> True
+                                                continue
+                                    IT[2]:
+                                        if self._can_jump(): --> True
+                                            if (3,4) in visited: --> False
+
+                                            visited.add((3,4)) so visited = {(3,0), (3,2), (3,4)}
+                                            new_loc = find_piece(3,4) = red_piece@(3,4)
+                                            if (new_row, new_col) in blank_spaces and step == 1: --> False
+                                            
+                                            if new_loc != 0 ....: --> True
+                                                mid_row, mid_col = 3, 4
+                                                jump_row, jump_col = 3 + 1 = 4, 4 + (4 - 3) = 5
+
+                                                if (4,5) in blank_spaces: --> True
+                                                    if king_check: --> True
+                                                        king_double_jump, visited_double = find_valid_moves(blue_piece@(4,1), row=4, col=5, dir=-1, blank_spaces, step=2, True, visited):
+
+                                                            new_row = 4 + -1 = 3
+                                                            new_col_l, new_col_r = 5 - 1 = 4, 5 + 1 = 6
+
+                                                            for new_col in [4, 6]:
+                                                            IT[1]:
+                                                                if self._can_jump(): --> True
+                                                                    if (new_row, new_col) in visited: --> True
+                                                                        continue
+                                                            IT[2]:
+                                                                if self._can_jump(): --> True
+                                                                    if (new_row, new_col) in visited: --> False
+
+                                                                    visited.add((3,6)) so visited = {(3,0), (3,2), (3,4), (3,6)}
+                                                                    new_loc = find_piece(3,6) = 0
+                                                                    if (new_row, new_col) in blank_spaces and step == 1: --> False
+                                                                    if new_loc != 0 ...: --> False
+                                                            RETURN {}, {(3,0), (3,2), (3,4), (3,6)}
+
+                                                        king_double_jump = {}
+                                                        visited_double = {(3,0), (3,2), (3,4), (3,6)}
+
+                                                        visited.update({(3,0), (3,2), (3,4), (3,6)}) so visited = {(3,0), (3,2), (3,4), (3,6)}
+
+                                                        for key, king_jumps in {}.items: --> Skips
+
+                                                    double_jump, visited_double = find_valid_moves(blue_piece@(4,1), row=4, col=5, dir=1, blank_spaces, step=2, visited):
+
+                                                        new_row = 4 + 1 = 5
+                                                        new_col_l, new_col_r = 5 - 1 = 4, 5 + 1 = 6
+
+                                                        for new_col in [4, 6]:
+                                                        IT[1]:
+                                                            if self._can_jump(): --> True
+                                                                if (new_row, new_col) in visited: --> False
+
+                                                                visited.add((5,4)) so visited = {(3,0), (3,2), (3,4), (3,6), (5,4)}
+                                                                new_loc = find_piece(5,4) = blue_piece@(5,4)
+                                                                if (new_row, new_col) in blank_spaces and step == 1: --> False
+                                                                if new_loc != 0 and ...: --> False
+                                                        IT[2]:
+                                                            if self._can_jump(): --> True
+                                                                if (new_row, new_col) in visited: --> False
+
+                                                                visited.add((5,6)) so visited = {(3,0), (3,2), (3,4), (3,6), (5,4), (5,6)}
+                                                                new_loc = find_piece(5,6) = blue_piece@(5,6)
+                                                                if (new_row, new_col) in blank_spaces and step == 1: --> False
+                                                                if new_loc != 0 ...: --> False
+                                                        RETURN {}, {(3,0), (3,2), (3,4), (3,6), (5,4), (5,6)}
+                                                        
+                                                    double_jump = {}
+                                                    visited_double = {(3,0), (3,2), (3,4), (3,6), (5,4), (5,6)}
+                                                        
+                                                    visited.update({(3,0), (3,2), (3,4), (3,6), (5,4), (5,6)}) so visited = {(3,0), (3,2), (3,4), (3,6), (5,4), (5,6)}
+
+                                                    if not double_jump: --> True
+                                                        moves.update({(4,5): [(3,4)]})
+                                        RETURN {(4,5): [(3,4)]}, {(3,0), (3,2), (3,4), (3,6), (5,4), (5,6)}
+                                
+                                king_double_jump = {(4,5): [(3,4)]}
+                                visited_double = {(3,0), (3,2), (3,4), (3,6), (5,4), (5,6)} 
+
+                                visited.update({(3,0), (3,2), (3,4), (3,6), (5,4), (5,6)}) so visited = {(3,0), (3,2), (3,4), (3,6), (5,4), (5,6)}
+
+                                for key, king_jumps in king_double_jump.items():
+                                IT[1]:
+                                    key = (4,5)
+                                    king_jumps = [(3,4)]
+                                    
+                                    temp = [(3,2)] + [(3,4)] = [(3,2), (3,4)]
+                                    moves.update({(4,5): [(3,2), (3,4)]})
+                            
+                            double_jump, visited_double = find_valid_moves(blue_piece@(4,1), row=2, col=3, dir=-1, blank_spaces, step=2, False, visited):
+                                visited = {(3,0), (3,2), (3,4), (3,6), (5,4), (5,6)}
+                                moves = {}
+                                new_row = row + direction = 1
+                                new_col_l, new_col_r = 3 - 1 = 2, 3 + 1 = 4
+
+                                for new_col in [2, 4]:
+                                IT[1]:
+                                    new_row = 1
+                                    new_col = 2
+
+                                    if self._can_jump(): --> True
+                                        if (1,2) in visited: --> False
+
+                                        visited.add((1,2)) so visited = {(3,0), (3,2), (3,4), (3,6), (5,4), (5,6), (1,2)} 
+                                        new_loc = find_piece(1,2) = 0
+                                        if (1,2) in blank_spaces and step == 1: --> False
+                                        if new_loc != 0 ...: --> True
+                                            mid_row, mid_col = 1, 2
+                                            jump_row, jump_col = 1 + -1 = 0, 2 + (2 - 3) = 1
+
+                                            if (0,1)in blank_spaces: --> False
+
+                                IT[2]:
+                                    new_row = 1
+                                    new_col = 4
+                                    visited = {(3,0), (3,2), (3,4), (3,6), (5,4), (5,6), (1,2)}
+
+                                    if self._can_jump(): --> True
+                                        if (1,4) in visited: --> False
+
+                                        visited.add((1,4)) so visited = {(3,0), (3,2), (3,4), (3,6), (5,4), (5,6), (1,2), (1,4)}
+                                        new_loc = find_piece(1,4) = 0
+
+                                        if (1,4) in blank_spaces and step == 1: --> False
+                                        if new_loc != 0 ...: --> False
+                                RETURN {}, {(3,0), (3,2), (3,4), (3,6), (5,4), (5,6), (1,2), (1,4)}
+
+                            double_jump = {}
+                            visited_ double = {(3,0), (3,2), (3,4), (3,6), (5,4), (5,6), (1,2), (1,4)}
+
+                            visited.update({(3,0), (3,2), (3,4), (3,6), (5,4), (5,6), (1,2), (1,4)}) so visited = {(3,0), (3,2), (3,4), (3,6), (5,4), (5,6), (1,2), (1,4)}
+
+                            if not {}: True
+                                moves.update({(2,3): (3,2)})
+            RETURN {(2,3): [(3,2)], (4,5): [(3,2), (3,4)]}, {(3,0), (3,2), (3,4), (3,6), (5,4), (5,6), (1,2), (1,4)}         
+
+        king_double_jump = {(4,5): [(3,2), (3,4)], (2,3): [(3,2)]}
+        visited_king =  {(3,0), (3,2), (3,4), (3,6), (5,4), (5,6), (1,2), (1,4)}
+
+        for key, king_jump in king_double_jump.items():
+        IT[1]:
+            temp = [(3,2)] + [(3,2), (3,4)] = [(3,2), (3,2), (3,4)]
+            moves.update({(4,5): [(3,2), (3,2), (3,4)]}) so moves = {(3,0): [], (4,5): [(3,2), (3,2), (3,4)]}
+        IT[2]:
+            temp = [(3,2)]  + [(3,2)] = [(3,2), (3,2)]
+            moves.update({(2,3): [(3,2), (3,2)]}) so moves = {(3,0): [], (4,5): [(3,2), (3,2), (3,4)], (2,3): [(3,2), (3,2)]}
+
+    RETURN {(3,0): [], (4,5): [(3,2), (3,2), (3,4)], (2,3): [(3,2), (3,2)]}, visited
+    
+    if direction = -1: --> True
+        valid_up = valid_moves
+    visited.update(visited_king)
+    
+    
+    
+    IT[2]:
+        ...

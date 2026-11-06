@@ -1,0 +1,5 @@
+A king piece can move in any direction,
+as opposed to man pieces which can only move in one.
+The rules for double jumps still apply to kings,
+but they can also chain together multiple jumps in 
+different directions.

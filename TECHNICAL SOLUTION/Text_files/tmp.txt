@@ -1,0 +1,38 @@
+# Appends move if space is occupied by enemy to the diagonal left
+          if ((new_row + direction, new_col - 1) in blank_spaces) and (new_row, new_col) == (row + direction, col - 1):
+            
+            # Enters recursive loop to check if more than one jump is possible in one turn
+            if king_check:
+              double_jump = self.king_movement(piece, new_row + direction, new_col - 1, blank_spaces, 2)
+            else:
+              double_jump = self.find_valid_moves(piece, new_row + direction, new_col - 1, direction, blank_spaces, 2)
+
+
+            # This if statement means that the middle jump is not possible if double jump is possible
+
+            if not double_jump:
+              moves.update({(new_row + direction, new_col - 1): [(new_row, new_col)]})
+            else:
+              for key in double_jump.keys():  
+                temp = [(new_row, new_col)]              
+                temp.extend(double_jump[key])
+                moves.update({key: temp})
+              
+
+          
+          # Appends move if space is occupied by enemy to the diagonal right          
+          if ((new_row + direction, new_col + 1) in blank_spaces) and (new_row, new_col) == (row + direction, col + 1):
+            
+            # Contents of this if statement is the same as the one above, excepts for the right diagonal check
+            if king_check:
+              double_jump = self.king_movement(piece, new_row + direction, new_col + 1, blank_spaces, 2)
+            else:
+              double_jump = self.find_valid_moves(piece, new_row + direction, new_col + 1, direction, blank_spaces, 2)        
+            
+            if not double_jump:
+              moves.update({(new_row + direction, new_col + 1): [(new_row, new_col)]})          
+            else:
+              for key, jump in double_jump.items():
+                temp = [(new_row, new_col)]                
+                temp.append(jump)
+                moves.update({key: temp})

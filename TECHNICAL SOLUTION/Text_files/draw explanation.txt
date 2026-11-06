@@ -1,0 +1,5 @@
+There are multiple conditions that could be fulfilled for a draw to occur, these being:
+○   If both players agree, they can decide to draw the game after 40 moves being played each
+○   If there have only been king movements and not jumps after 25 moves
+○   If there are 3 kings, 2 kings and a man piece, 
+      2 man pieces and a king against one king after 16 moves being played

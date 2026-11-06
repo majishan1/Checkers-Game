@@ -1,0 +1,4 @@
+When a piece reaches the end of the 
+board, it becomes a king
+A king is shown by a standard piece
+with an image of a crown ontop
